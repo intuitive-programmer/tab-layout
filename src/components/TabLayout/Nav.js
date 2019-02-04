@@ -1,8 +1,14 @@
 import React from 'react'
 
-const Nav = ({children}) => (
+const Nav = ({children, activeIndex}) => (
   <div className="tab-layout__nav">
-    {children}
+    {children.map((child, index) =>
+      React.cloneElement(child, {
+        key: index,
+        index,
+        activeIndex,
+      })  
+    )}
   </div>
 )
 

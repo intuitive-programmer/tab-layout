@@ -31,6 +31,8 @@ body {
 .tab-layout__nav__tab {
   min-width: 10em;
   height: 100%;
+  padding: 2px 0 0;
+  border-bottom: 2px solid transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,5 +41,8 @@ body {
   color: #546e7a;
     &:hover {
       background-color: #eceff1;
+    }
+    @at-root #{&}--active {
+      border-bottom: 2px solid #546e7a;
     }
 }
