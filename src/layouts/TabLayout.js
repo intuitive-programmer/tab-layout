@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import Nav from '../components/TabLayout/Nav'
+import Content from '../components/TabLayout/Content'
 
 class TabLayout extends Component {
   static Nav = ({children, activeIndex, activateTab}) => (
@@ -8,6 +9,12 @@ class TabLayout extends Component {
       activeIndex={activeIndex}
       activateTab={activateTab}
     >{children}</Nav>
+  )
+
+  static Content =({children, activeIndex}) => (
+    <Content
+      activeIndex={activeIndex}
+    >{children}</Content>
   )
 
   state = {

@@ -21,6 +21,7 @@ body {
 }
 
 .tab-layout__nav {
+  position: relative;
   width: 100%;
   height: 3em;
   display: flex;
@@ -44,5 +45,27 @@ body {
     }
     @at-root #{&}--active {
       border-bottom: 2px solid #546e7a;
+    }
+}
+
+.tab-layout__content {
+  width: 100%;
+  height: calc(100% - 3em);
+  padding: 0 1em;
+  margin: 0 auto;
+  background-color: #eee;
+}
+
+@media only screen and (max-width: 600px) {
+  .tab-layout__content {
+    width: 75%;
+  }
+}
+
+.page {
+  padding: 2em 0;
+  display: none;
+    @at-root #{&}--active {
+      display: block;
     }
 }
