@@ -9,3 +9,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+@mixin box-shadow($params...) {
+  -webkit-box-shadow: $params;
+  -moz-box-shadow: $params;
+  box-shadow: $params;
+}
+
+.tab-layout__nav {
+  width: 100%;
+  height: 3em;
+  @include box-shadow(0 0.125em 0.3125em rgba(0, 0, 0, 0.08), 0 0.125em 0.3125em rgba(0, 0, 0, 0.12));
+}

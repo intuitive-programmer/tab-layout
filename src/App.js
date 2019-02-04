@@ -1,7 +1,13 @@
 import React from 'react'
 
+import TabLayout from './layouts/TabLayout'
+
 const App = () => (
-  <div>I'm working</div>
+  <TabLayout>
+    <TabLayout.Nav>
+
+    </TabLayout.Nav>
+  </TabLayout>
 )
 
 export default App
